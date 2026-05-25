@@ -6,28 +6,37 @@ import { CartProvider } from '@/context/CartContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Pizza School - Premium Italian Pizza Delivery',
-  description: 'Welcome to Pizza School, where every slice gets an A+. Handcrafted premium pizzas with fresh ingredients. Fast delivery in Cairo.',
-  keywords: 'Pizza, Italian, Delivery, Cairo, Premium Pizza, Pizza School',
+  title: "Pizza School | Premium Pizza Restaurant",
+
+  description:
+    "Premium handcrafted pizza with fast delivery and authentic Italian flavor.",
+
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+
   openGraph: {
-    title: 'Pizza School - Premium Pizza Delivery',
-    description: 'Every slice gets an A+',
-    type: 'website',
+    title: "Pizza School",
+    description:
+      "Premium handcrafted pizza with fast delivery and authentic Italian flavor.",
+
     images: [
       {
-        url: 'https://bolt.new/static/og_default.png',
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
       },
     ],
   },
+
   twitter: {
-    card: 'summary_large_image',
-    title: 'Pizza School - Premium Pizza Delivery',
-    description: 'Every slice gets an A+',
-    images: [
-      {
-        url: 'https://bolt.new/static/og_default.png',
-      },
-    ],
+    card: "summary_large_image",
+    title: "Pizza School",
+    description:
+      "Premium handcrafted pizza with fast delivery and authentic Italian flavor.",
+    images: ["/og-image.png"],
   },
 };
 

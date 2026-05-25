@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #111111;
+  --secondary: #d62828;
+  --accent: #ffffff;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6.7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6.7%;
+    --primary: 0 0% 6.7%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 84% 43%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 89%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 89%;
+    --input: 0 0% 95%;
+  }
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6.7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6.7%;
+    --primary: 0 0% 6.7%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 84% 43%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 89%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 89%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 font-sans;
+  }
+
+  h1 { @apply font-bold text-4xl md:text-5xl; }
+  h2 { @apply font-bold text-3xl md:text-4xl; }
+  h3 { @apply font-bold text-2xl; }
+  h4 { @apply font-bold text-xl; }
+}
+
+@layer components {
+  .product-card {
+    @apply bg-white rounded-lg overflow-hidden border border-gray-100 transition-all duration-200 hover:shadow-md;
+  }
+
+  .product-image {
+    @apply w-full aspect-square bg-gray-100 flex items-center justify-center overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-gray-300 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200;
+  }
+
+  .badge-bestseller {
+    @apply inline-block bg-red-600 text-white text-xs font-bold px-2 py-1 rounded;
+  }
+
+  .badge-new {
+    @apply inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded;
+  }
+
+  .badge-spicy {
+    @apply inline-block bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded;
+  }
+}
